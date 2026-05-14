@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    display: flex;
+    flex: 1;
+}
+form {
+    height: 50%;
+    width: 50%;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2rem;
+}
+legend {
+    font-size: 200%;
+}
+.banner {
+    height: 100vh;
+    width: 30vw;
+}
+img {
+  min-height: 100%;
+  width: auto;
+}
+.trim {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.rowt {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 3rem;
+}
+label {
+    display: flex;
+    flex-direction: column;
+}
