@@ -1,30 +1,133 @@
+@font-face {
+    font-family: "RobotoM";
+    src: url(Roboto-Medium.ttf);
+}
+a {
+    text-decoration: none;
+    color: rgb(114, 190, 192);
+}
+a:hover {
+    color:cadetblue;
+}
+a:active {
+    color:rgb(76, 126, 128);
+}
+*:focus {
+    outline: none;
+}
 body {
     margin: 0;
     display: flex;
     flex: 1;
+    font-family: "RobotoM", sans-serif;
+}
+.mainc {
+    height: 95%;
+    width: 100%;
+    margin-top: 5%;
+}
+.info {
+    margin: 2rem;
+    font-size: 150%;
 }
 form {
+    margin-top: 10%;
     height: 50%;
-    width: 50%;
+    width: 100%;
+}
+.extras {
+    margin: 3rem;
+    margin-top: 1.5rem;
+}
+.extras button {
+    margin-bottom: 1rem;
+    border: 0;
+    background-color: rgb(114, 190, 192);
+    color: white;
+    font-weight: bold;
+    font-size: 100%;
+    --buttonpadtb: 0.75rem;
+    --buttonpadlr: 1.25rem;
+    padding: var(--buttonpadtb) var(--buttonpadlr) var(--buttonpadtb) var(--buttonpadlr);
+    border-radius: 5px;
+}
+.extras button:hover {
+    background-color: rgb(76, 126, 128);
+}
+.extras button:active {
+    padding: calc(var(--buttonpadtb) - 3px) calc(var(--buttonpadlr) - 3px) calc(var(--buttonpadtb) - 3px) calc(var(--buttonpadlr) - 3px);
+    border: 3px solid cadetblue;
 }
 fieldset {
+    width:max-content;
+    margin-left: 5%;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    border: 0;
     display: flex;
     flex-direction: column;
     flex: 1;
     gap: 2rem;
 }
+fieldset label {
+    font-size: 90%;
+    margin-left: 0.5rem;
+}
+fieldset input:user-invalid {
+    border: 1px solid red;
+}
+fieldset input {
+    padding-left: 0.5rem;
+    height: 1.75rem;
+    width: 17.5rem;
+    border: 1px solid black; /* make this go blue when selected*/
+    border-radius: 5px;
+    font-size: 120%;
+}
+fieldset input:focus {
+    border: 1px solid cadetblue;
+}
 legend {
-    font-size: 200%;
+    margin-bottom: 0.5rem;
+    letter-spacing: normal;
+    font-size: 150%;
 }
 .banner {
+    display: block;
     height: 100vh;
-    width: 30vw;
+    width: 35vw;
 }
-img {
-  min-height: 100%;
-  width: auto;
+#logo {
+    position: absolute; 
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 20%;
+    width: inherit;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 6rem;
+}
+#logo img {
+    z-index: 2;
+    position: relative;
+    height: 90%;
+    width: auto;
+}
+.trim img {
+    min-height: 100%;
+    width: auto;
+}
+form img {
+    height: 1rem;
+    width: 100%;
 }
 .trim {
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
